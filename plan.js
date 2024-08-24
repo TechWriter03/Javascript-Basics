@@ -19,7 +19,7 @@ function keepTrying() {
 const executePlan = async () => {
     try {
         const achieved = await success();
-        if(achieved==true)
+        if(achieved)
             learnMore();
     }
     catch(e) {

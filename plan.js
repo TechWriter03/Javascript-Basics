@@ -8,8 +8,8 @@ const success = () => {
     });
 }
 
-function learnMore() {
-    console.log("I will learn more")
+function celebrate() {
+    console.log("I did it..!")
 }
 
 function keepTrying() {
@@ -17,14 +17,11 @@ function keepTrying() {
 }
 
 const executePlan = async () => {
-    try {
-        const achieved = await success();
-        if(achieved)
-            learnMore();
-    }
-    catch(e) {
+    const achieved = await success();
+    if(achieved)
+        celebrate();
+    else
         keepTrying();
-    }
 }
 
 executePlan();

@@ -9,7 +9,11 @@ const success = () => {
 }
 
 function celebrate() {
-    console.log("I did it..!")
+    console.log("I did it..!");
+}
+
+function setNewGoals() {
+    console.log("Set new goals & work for it");
 }
 
 function keepTrying() {
@@ -18,10 +22,13 @@ function keepTrying() {
 
 const executePlan = async () => {
     const achieved = await success();
-    if(achieved)
+    if(achieved) {
         celebrate();
-    else
+        setNewGoals();
+    }
+    else {
         keepTrying();
+    }
 }
 
 executePlan();
